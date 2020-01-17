@@ -85,18 +85,15 @@ header("location:Logout");
   from {transform: scale(0)}
   to {transform: scale(1)}
 }
-
 .dropbtn {
   color: #FF0000;
   font-size: 14px;
   border: none;
 }
-
 .dropdown {
   position: relative;
   display: inline-block;
 }
-
 .dropdown-content {
   display: none;
   position: absolute;
@@ -105,18 +102,14 @@ header("location:Logout");
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
-
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
-
 .dropdown-content a:hover {background-color: #7dcef3;}
-
 .dropdown:hover .dropdown-content {display: block;}
-
 .dropdown:hover .dropbtn {background-color: #7dcef3;}
 </style>
 </head>
@@ -129,7 +122,7 @@ header("location:Logout");
       <nav>
         <div id="logo">
           <h1>
-            <a href="<?php echo base_url();?>"> Explore World</a>
+            <a href="<?php echo base_url();?>"> FYMIE</a>
           </h1>
         </div>
         <label for="drop" class="toggle">Menu</label>
@@ -162,9 +155,10 @@ header("location:Logout");
     ?>
     <li>
 		<div class="dropdown">
-			<a class="dropbtn"><?php  echo $user_name['userNameData']['0']['name'] ;?></a>
+			<a class="dropbtn"><?php  echo $user_name['userNameData']['name'] ;?></a>
 			<div class="dropdown-content">
 			<a href="<?php echo base_url();?>Profile/show_profile">Profile</a>
+			<a href="<?php echo base_url();?>Match/show_match">Matches</a>
 			<a href="<?php echo base_url();?>Logout">Logout</a>
 			</div>
 		</div>
@@ -179,10 +173,10 @@ header("location:Logout");
     <!-- //header -->
     <div class="col-lg-10"  align="center" >
 	<br>
-		<?php if($this->session->flashdata('message')=='Loggedin successfully' || $this->session->flashdata('message')=='Registered Successfully you can verify and Login' || $this->session->flashdata('message')=='Successfully Added' || $this->session->flashdata('message')=='Message Sent Successfully'|| $this->session->flashdata('message')=='Subscribe Successfully'){ ?>
-		<div class="col-lg-3 alert alert-success" id="s_f_msg" align="center"><?php  echo $this->session->flashdata('message'); ?></div>
-		<?php }elseif($this->session->flashdata('message')=='Wrong Username Or Password'||$this->session->flashdata('message')=='Something Went Wrong!'){ ?>
-		<div class="col-lg-3 alert alert-danger" id="s_f_msg" align="center"><?php  echo $this->session->flashdata('message'); ?></div>
+		<?php if($this->session->flashdata('message')=='Loggedin successfully' || $this->session->flashdata('message')=='Registered Successfully you can verify and Login' || $this->session->flashdata('message')=='Successfully Added' || $this->session->flashdata('message')=='Email Verified Successfully!' ||  $this->session->flashdata('message')=='Message Sent Successfully'|| $this->session->flashdata('message')=='Subscribe Successfully'){ ?>
+		<div class="col-lg-3 alert alert-success" id="s_f_msg" aling="center"><?php  echo $this->session->flashdata('message'); ?></div>
+		<?php }elseif($this->session->flashdata('message')=='Wrong Username Or Password'||$this->session->flashdata('message')=='Something Went Wrong!'||$this->session->flashdata('message')=='Please Verify your Email Account First'||$this->session->flashdata('message')=='Sorry Unable to Verify Your Email!'){ ?>
+		<div class="col-lg-3 alert alert-danger" id="s_f_msg" aling="center"><?php  echo $this->session->flashdata('message'); ?></div>
 		<?php } ?>
 	</div>
   <script>

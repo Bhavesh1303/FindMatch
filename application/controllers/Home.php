@@ -23,10 +23,12 @@ public function __construct() {
 parent::__construct();
 // Load form helper library
 $this->load->helper('form');
+$this->load->helper('string');
 // Load form validation library
 $this->load->library('form_validation');
 // Load session library
 $this->load->library('session');
+$this->load->library('email');
 // Load database
 $this->load->model('Login_model');
 $this->load->model('Main_model');
@@ -51,7 +53,7 @@ $this->load->model('booking_model');
 		
 			$return=$this->Login_model->login($username,$password);
 			
-            if($return['flag']==1){
+			if($return['resultData']['status']=="Verified" && $return['flag']==1){
 		
 	                   $data = array(
 						'user_id'=>$return['resultData']['id'],
@@ -61,9 +63,13 @@ $this->load->model('booking_model');
                  );
 				 $this->session->set_userdata($data);
 				 $this->session->set_flashdata('message','Loggedin successfully');
-		  } else {
+			}
+			elseif($return['resultData']['status']=="Unverified" && $return['flag']==1){
+				$this->session->set_flashdata('message','Please Verify your Email Account First');
+			} 
+			else{
 				$this->session->set_flashdata('message','Wrong Username Or Password');
-			 }
+			}
 				redirect('home','return');
           }
        }
@@ -71,7 +77,7 @@ $this->load->model('booking_model');
  public function ForgotPassword()
    {
 	  
-           $email = $this->input->post('email');
+        $email = $this->input->post('email');
 	 	$data['emaildata'] = $this->Login_model->ForgotPassword($email);
 	    if($data['emaildata']['flag'])
 	    {
@@ -132,6 +138,7 @@ $this->load->model('booking_model');
 		$this->form_validation->set_rules('email', 'email', 'required');
 		$this->form_validation->set_rules('Mobile', 'Mobile', 'required');
 		$this->form_validation->set_rules('Gender', 'Gender', 'required');
+		$this->form_validation->set_rules('description', 'description', 'required');
 		$this->form_validation->set_rules('password', 'password', 'required');
         if($this->form_validation->run() == true)
         {
@@ -139,20 +146,65 @@ $this->load->model('booking_model');
 			$email = $this->input->post('email');
             $Mobile = $this->input->post('Mobile');
             $Gender = $this->input->post('Gender');
+            $Description = $this->input->post('description');
             $password = $this->input->post('password');
-				 
+			$rstring= random_string('alnum',20);
+		if (!empty($_FILES['userpic']['name'])){    
+        
+			$imagename=date("d-m-Y")."-".time();
+		   //$fileinfo = pathinfo($_FILES['file']['name']);
+		   //$extension = $fileinfo['extension'];
+		   $ext = pathinfo($_FILES['userpic']['name'], PATHINFO_EXTENSION);
+		   if($ext ==='gif' || $ext ==='jpg' || $ext ==='png' || $ext ==='PNG' ||$ext ==='jpeg')
+		   {
+			$config = array(
+			'upload_path'   => './upload/',
+			'allowed_types' => 'gif|jpg|png|jpeg',
+			'max_size' => "2048", // Can be set to particular file size , here it is 2 MB(2048 Kb)
+			'file_name'     =>$imagename //"criminal_images!".$imagename
+			 );        
+			 $this->load->library('upload', $config);
+				
+			 if ( ! $this->upload->do_upload('userpic')) {
+				$error = array('error' => $this->upload->display_errors()); 
+				echo $this->upload->display_errors() ;
+			die("userpic");
+			 }
+			else
+			{
+			$imageDetailArray = $this->upload->data();
+			$fileName = "Users_image/".$imagename. '.' .$ext; // $imageDetailArray['file_name'];
+			
+			}
+		   }
+			}else {
+			$fileName='';
+			}	
 			 $newUserData = array(
                  'name'=>$usname,
                  'email_id'=>$email,
                  'mobile_no'=>$Mobile,
                  'gender'=>$Gender,
-                 'password'=>$password,
+				 'description'=>$Description,
+				 'user_photo'=>$fileName,
+				 'password'=>$password,
+				 'email_verification_code'=>$rstring,
                  'status'=>'Unverified',
 				   ); 
-				$this->db->insert('user',$newUserData);
-				
+			$this->db->insert('user',$newUserData);
+			$this->Main_model->sendVerificatinEmail($email,$rstring);
+		
+		/*		
+			$from_email = "your@example.com"; 
+			$this->email->from($from_email, 'FYMIE Subscribe'); 
+			$this->email->to($email);
+			$this->email->subject('Email Verification by FYMIE'); 
+			$this->email->message('Thankyou for registering with FYMIE'); 
+			//Send mail 
+			$this->email->send();
+
          $to = $email;
-         $subject = "Email Verification by FYMIE";
+         $subject = "Email Verification ";
          
          $message = "<b>Thankyou for registering with FYMIE.</b>";
          $message .= "<h1></h1>";
@@ -167,7 +219,7 @@ $this->load->model('booking_model');
             echo "Message sent successfully...";
          }else {
             echo "Message could not be sent...";
-         }
+		 }*/
 				$this->session->set_flashdata('message','Registered Successfully you can verify and Login');
 		    	redirect ('home');
 		}  
@@ -177,18 +229,38 @@ $this->load->model('booking_model');
 		    $this->load->view('home');	
 		}
 	}
+
+	
+	function verify($verificationText=NULL){  
+		$noRecords = $this->Main_model->verifyEmailAddress($verificationText);  
+		if ($noRecords > 0){
+			$this->session->set_flashdata('message','Email Verified Successfully!');
+		}else{
+			$this->session->set_flashdata('message','Sorry Unable to Verify Your Email!');
+		}
+		redirect ('home');
+	   }
+	   
+
+
 	public function Subscribe()
 	{
 		
 		$this->form_validation->set_rules('email_id', 'email_id', 'required');
         if($this->form_validation->run() == true)
         {
+			
+			
+			$from_email = "fymie.events@gmail.com"; 
 			$email_id = $this->input->post('email_id');
-			$lname = $this->input->post('lname');
-            $phone = $this->input->post('phone');
-            $email = $this->input->post('email');
-            $message = $this->input->post('message');
-				
+	  
+			$this->email->from($from_email, 'FYMIE Subscribe'); 
+			$this->email->to($email_id);
+			$this->email->subject('Subscribe'); 
+			$this->email->message('Thank You For Subscribing FYMIE'); 
+			//Send mail 
+			$this->email->send();
+	  
 			 $newSubscribe = array(
                  'email'=>$email_id,
 				   ); 
@@ -219,6 +291,16 @@ $this->load->model('booking_model');
             $email = $this->input->post('email');
             $message = $this->input->post('message');
 				
+			$final_msg="Name: ".$fname." ".$lname."\nMobile no: ".$phone."\nMessage: ".$message;
+			$to_email = "fymie.events@gmail.com"; 
+	  
+			$this->email->from($email, 'FYMIE Contact'); 
+			$this->email->to($to_email);
+			$this->email->subject('Message from Contact (FYMIE)'); 
+			$this->email->message($final_msg); 
+			//Send mail 
+			$this->email->send();
+	  
 			 $newContact = array(
                  'first_name'=>$fname,
                  'last_name'=>$lname,

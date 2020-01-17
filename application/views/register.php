@@ -3,7 +3,6 @@
 html *{
     -webkit-font-smoothing: antialiased;
 }
-
 .h6, h6 {
     font-size: .75rem !important;
     font-weight: 500;
@@ -11,16 +10,13 @@ html *{
     line-height: 1.5em;
     text-transform: uppercase;
 }
-
 * {box-sizing: border-box}
-
 /* Add padding to containers */
 .container {
   padding: 16px;
 }
-
 /* Full-width input fields */
-input[type=text], input[type=password], input[type=number], input[type=email], select {
+input[type=text], input[type=password], input[type=number], input[type=email], select, textarea{
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -28,18 +24,15 @@ input[type=text], input[type=password], input[type=number], input[type=email], s
   border: none;
   background: #f1f1f1;
 }
-
 input[type=text]:focus, input[type=password]:focus, input[type=number]:focus, input[type=email]:focus, select:focus {
   background-color: #ddd;
   outline: none;
 }
-
 /* Overwrite default styles of hr */
 hr {
   border: 1px solid #f1f1f1;
   margin-bottom: 25px;
 }
-
 /* Set a style for the submit/register button */
 .registerbtn {
   background-color: #4CAF50;
@@ -51,27 +44,22 @@ hr {
   width: 100%;
   opacity: 0.9;
 }
-
 .registerbtn:hover {
   opacity:1;
 }
-
 /* Add a blue text color to links */
 a {
   color: dodgerblue;
 }
-
 /* Set a grey background color and center the text of the "sign in" section */
 .signin {
   background-color: #f1f1f1;
   text-align: center;
 }
-
 .name h6 {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
 .navbar {
     border: 0;
     border-radius: 3px;
@@ -84,7 +72,6 @@ a {
     transition: all 150ms ease 0s;
     
 }
-
 .navbar.navbar-transparent {
     z-index: 1030;
     background-color: transparent!important;
@@ -92,7 +79,6 @@ a {
     padding-top: 25px;
     color: #fff;
 }
-
 .navbar .navbar-brand {
     position: relative;
     color: inherit;
@@ -103,26 +89,22 @@ a {
     font-weight: 300;
     -webkit-font-smoothing: antialiased;
 }
-
 .navbar .navbar-nav .nav-item .nav-link:not(.btn) .material-icons {
     margin-top: -7px;
     top: 3px;
     position: relative;
     margin-right: 3px;
 }
-
 .navbar .navbar-nav .nav-item .nav-link .material-icons {
     font-size: 1.25rem;
     max-width: 24px;
     margin-top: -1.1em;
 }
-
 .navbar .navbar-nav .nav-item .nav-link .fa, .navbar .navbar-nav .nav-item .nav-link .material-icons {
     font-size: 1.25rem;
     max-width: 24px;
     margin-top: -1.1em;
 }
-
 .navbar .navbar-nav .nav-item .nav-link {
     position: relative;
     color: inherit;
@@ -132,23 +114,19 @@ a {
     border-radius: 3px;
     line-height: 20px;
 }
-
 a .material-icons {
     vertical-align: middle;
 }
-
 .fixed-top {
     position: fixed;
     z-index: 1030;
     left: 0;
     right: 0;
 }
-
 .profile-page .page-header {
     height: 380px;
     background-position:center;
 }
-
 .page-header {
     height: 100vh;
     background-size: cover;
@@ -158,7 +136,6 @@ a .material-icons {
     display: flex;
     align-items: center;
 }
-
 .header-filter:after, .header-filter:before {
     position: absolute;
     z-index: 1;
@@ -169,27 +146,22 @@ a .material-icons {
     top: 0;
     content: "";
 }
-
 .header-filter::before {
     background: rgba(0,0,0,.5);
 }
-
 .main-raised {
     margin: -60px 30px 0;
     border-radius: 6px;
     box-shadow: 0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.2);
 }
-
 .main {
     background: #FFF;
     position: relative;
     z-index: 3;
 }
-
 .profile-page .profile {
     text-align: center;
 }
-
 .profile-page .profile img {
     max-width: 160px;
     width: 100%;
@@ -200,20 +172,16 @@ a .material-icons {
     -ms-transform: translate3d(0,-50%,0);
     transform: translate3d(0,-50%,0);
 }
-
 .img-raised {
     box-shadow: 0 5px 15px -8px rgba(0,0,0,.24), 0 8px 10px -5px rgba(0,0,0,.2);
 }
-
 .rounded-circle {
     border-radius: 50%!important;
 }
-
 .img-fluid, .img-thumbnail {
     max-width: 100%;
     height: auto;
 }
-
 .title {
     margin-top: 30px;
     margin-bottom: 25px;
@@ -222,44 +190,36 @@ a .material-icons {
     font-weight: 700;
     font-family: "Roboto Slab","Times New Roman",serif;
 }
-
 .profile-page .description {
     margin: 1.071rem auto 0;
     max-width: 600px;
     color: #999;
     font-weight: 300;
 }
-
 p {
     font-size: 14px;
     margin: 0 0 10px;
 }
-
 .profile-page .profile-tabs {
     margin-top: 4.284rem;
 }
-
 .nav-pills, .nav-tabs {
     border: 0;
     border-radius: 3px;
     padding: 0 15px;
 }
-
 .nav .nav-item {
     position: relative;
     margin: 0 2px;
 }
-
 .nav-pills.nav-pills-icons .nav-item .nav-link {
     border-radius: 4px;
 }
-
 .nav-pills .nav-item .nav-link.active {
     color: #fff;
     background-color: #9c27b0;
     box-shadow: 0 5px 20px 0 rgba(0,0,0,.2), 0 13px 24px -11px rgba(156,39,176,.6);
 }
-
 .nav-pills .nav-item .nav-link {
     line-height: 24px;
     font-size: 12px;
@@ -271,44 +231,34 @@ p {
     padding: 10px 15px;
     text-align: center;
 }
-
 .nav-pills .nav-item .nav-link:not(.active):hover {
     background-color: rgba(200,200,200,.2);
 }
-
-
 .nav-pills .nav-item i {
     display: block;
     font-size: 30px;
     padding: 15px 0;
 }
-
 .tab-space {
     padding: 20px 0 50px;
 }
-
 .profile-page .gallery {
     margin-top: 3.213rem;
     padding-bottom: 50px;
 }
-
 .profile-page .gallery img {
     width: 100%;
     margin-bottom: 2.142rem;
 }
-
 .profile-page .profile .name{
     margin-top: -80px;
 }
-
 img.rounded {
     border-radius: 6px!important;
 }
-
 .tab-content>.active {
     display: block;
 }
-
 /*buttons*/
 .btn {
     position: relative;
@@ -326,7 +276,6 @@ img.rounded {
     transition: box-shadow .2s cubic-bezier(.4,0,1,1),background-color .2s cubic-bezier(.4,0,.2,1);
     will-change: box-shadow,transform;
 }
-
 .btn.btn-just-icon {
     font-size: 20px;
     height: 41px;
@@ -337,7 +286,6 @@ img.rounded {
     position: relative;
     line-height: 41px;
 }
-
 .btn.btn-just-icon fa{
     margin-top: 0;
     position: absolute;
@@ -353,12 +301,7 @@ img.rounded {
     background-color: transparent;
     color: #999;
 }
-
 /* dropdown */
-
-
-
-
 .dropdown-menu {
     position: absolute;
     top: 100%;
@@ -375,12 +318,9 @@ img.rounded {
     border-radius: .25rem;
     transition: transform .3s cubic-bezier(.4,0,.2,1),opacity .2s cubic-bezier(.4,0,.2,1);
 }
-
 .dropdown-menu.show{
     transition: transform .3s cubic-bezier(.4,0,.2,1),opacity .2s cubic-bezier(.4,0,.2,1);
 }
-
-
 .dropdown-menu .dropdown-item:focus, .dropdown-menu .dropdown-item:hover, .dropdown-menu a:active, .dropdown-menu a:focus, .dropdown-menu a:hover {
     box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(156,39,176,.4);
     background-color: #9c27b0;
@@ -389,13 +329,10 @@ img.rounded {
 .show .dropdown-toggle:after {
     transform: rotate(180deg);
 }
-
 .dropdown-toggle:after {
     will-change: transform;
     transition: transform .15s linear;
 }
-
-
 .dropdown-menu .dropdown-item, .dropdown-menu li>a {
     position: relative;
     width: auto;
@@ -417,11 +354,9 @@ img.rounded {
     text-overflow: ellipsis;
     word-wrap: break-word;
 }
-
 .dropdown-menu.dropdown-with-icons .dropdown-item {
     padding: .75rem 1.25rem .75rem .75rem;
 }
-
 .dropdown-menu.dropdown-with-icons .dropdown-item .material-icons {
     vertical-align: middle;
     font-size: 24px;
@@ -431,9 +366,7 @@ img.rounded {
     margin-right: 12px;
     opacity: .5;
 }
-
 /* footer */
-
 footer{
     margin-top: 10px;
     color: #555;
@@ -451,12 +384,10 @@ footer p a{
     color: #555;
     font-weight: 400;
 }
-
 footer p a:hover {
     color: #9f26aa;
     text-decoration: none;
 }
-
 </style>
 <head>
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -469,7 +400,7 @@ footer p a:hover {
 
 <body class="profile-page">
     
-    <div class="page-header header-filter" data-parallax="true" style="background-image:url('<?php echo base_url();?>assets/images/d.jpg');"></div>
+    <div class="page-header header-filter" data-parallax="true" style="background-image:url('<?php echo base_url();?>assets/images/background.jpg');"></div>
     <div class="main main-raised">
 		<div class="profile-content">
             <div class="container">
@@ -482,33 +413,44 @@ footer p a:hover {
 	                    </div>
     	            </div>
                 </div>
-                <div class="description text-center">
+                <div class="description text-left">
                     <form action="<?php echo base_url();?>Home/Registeration" method="POST">
   <div class="container">
+        <div id="logo">
+          <h1>
+            <a href="<?php echo base_url();?>Home" style="font-family: serif;"> FYMIE</a>
+          </h1>
+        </div>
     <h1>Register</h1>
     <p>Please fill in this form to create an account.</p>
     <hr>
 
-    <label for="name"><b>Name:</b></label>
+    <label for="name"><b>Name</b></label>
     <input type="text" placeholder="Enter Name" name="usname" required>
 	
-    <label for="email"><b>Email:</b></label>
+    <label for="email"><b>Email</b></label>
     <input type="email" placeholder="Enter Email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
 
-    <label for="Mobile"><b>Mobile No:</b></label>
+    <label for="Mobile"><b>Mobile No</b></label>
     <input type="number" placeholder="Enter Mobile Number" name="Mobile" required>
 	
-    <label for="Gender"><b>Gender:</b></label>
+    <label for="Gender"><b>Gender</b></label>
 	<select name="Gender" required>
 		<option value="Male">Male</option>
 		<option value="Female">Female</option>
 		<option value="Others">Others</option>
 	</select>
+  <br/>
+  <br/>
+  <label for="Decsription"><b>Describe Yourself</b></label>
+  <textarea type="text" placeholder="Describe Yourself" name="description" rows="3" cols="69" required></textarea>
 <br/>
 <br/>
-    <label for="psw"><b>Password:</b></label>
+    <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="password" required>
 
+    <label for="photo"><b>Photo </b></label>
+    <input type = "file" name = "userpic" /> 
       <hr>
 
     <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
@@ -536,46 +478,31 @@ footer p a:hover {
 </body>
 <script>
 var big_image;
-
 $(document).ready(function() {
   BrowserDetect.init();
-
   // Init Material scripts for buttons ripples, inputs animations etc, more info on the next link https://github.com/FezVrasta/bootstrap-material-design#materialjs
   $('body').bootstrapMaterialDesign();
-
   window_width = $(window).width();
-
   $navbar = $('.navbar[color-on-scroll]');
   scroll_distance = $navbar.attr('color-on-scroll') || 500;
-
   $navbar_collapse = $('.navbar').find('.navbar-collapse');
-
   //  Activate the Tooltips
   $('[data-toggle="tooltip"], [rel="tooltip"]').tooltip();
-
   // Activate Popovers
   $('[data-toggle="popover"]').popover();
-
   if ($('.navbar-color-on-scroll').length != 0) {
     $(window).on('scroll', materialKit.checkScrollForTransparentNavbar);
   }
-
   materialKit.checkScrollForTransparentNavbar();
-
   if (window_width >= 768) {
     big_image = $('.page-header[data-parallax="true"]');
     if (big_image.length != 0) {
       $(window).on('scroll', materialKit.checkScrollForParallax);
     }
-
   }
-
-
 });
-
 $(document).on('click', '.navbar-toggler', function() {
   $toggle = $(this);
-
   if (materialKit.misc.navbar_menu_visible == 1) {
     $('html').removeClass('nav-open');
     materialKit.misc.navbar_menu_visible = 0;
@@ -583,18 +510,14 @@ $(document).on('click', '.navbar-toggler', function() {
     setTimeout(function() {
       $toggle.removeClass('toggled');
     }, 550);
-
     $('html').removeClass('nav-open-absolute');
   } else {
     setTimeout(function() {
       $toggle.addClass('toggled');
     }, 580);
-
-
     div = '<div id="bodyClick"></div>';
     $(div).appendTo("body").click(function() {
       $('html').removeClass('nav-open');
-
       if ($('nav').hasClass('navbar-absolute')) {
         $('html').removeClass('nav-open-absolute');
       }
@@ -604,16 +527,13 @@ $(document).on('click', '.navbar-toggler', function() {
         $toggle.removeClass('toggled');
       }, 550);
     });
-
     if ($('nav').hasClass('navbar-absolute')) {
       $('html').addClass('nav-open-absolute');
     }
-
     $('html').addClass('nav-open');
     materialKit.misc.navbar_menu_visible = 1;
   }
 });
-
 materialKit = {
   misc: {
     navbar_menu_visible: 0,
@@ -623,7 +543,6 @@ materialKit = {
     navbar_initialized: false,
     isWindow: document.documentMode || /Edge/.test(navigator.userAgent)
   },
-
   initFormExtendedDatetimepickers: function() {
     $('.datetimepicker').datetimepicker({
       icons: {
@@ -639,11 +558,9 @@ materialKit = {
       }
     });
   },
-
   initSliders: function() {
     // Sliders for demo purpose
     var slider = document.getElementById('sliderRegular');
-
     noUiSlider.create(slider, {
       start: 40,
       connect: [true, false],
@@ -652,9 +569,7 @@ materialKit = {
         max: 100
       }
     });
-
     var slider2 = document.getElementById('sliderDouble');
-
     noUiSlider.create(slider2, {
       start: [20, 60],
       connect: true,
@@ -664,7 +579,6 @@ materialKit = {
       }
     });
   },
-
   checkScrollForParallax: function() {
     oVal = ($(window).scrollTop() / 3);
     big_image.css({
@@ -674,7 +588,6 @@ materialKit = {
       '-o-transform': 'translate3d(0,' + oVal + 'px,0)'
     });
   },
-
   checkScrollForTransparentNavbar: debounce(function() {
     if ($(document).scrollTop() > scroll_distance) {
       if (materialKit.misc.transparent) {
@@ -689,12 +602,10 @@ materialKit = {
     }
   }, 17)
 };
-
 // Returns a function, that, as long as it continues to be invoked, will not
 // be triggered. The function will be called after it stops being called for
 // N milliseconds. If `immediate` is passed, trigger the function on the
 // leading edge, instead of the trailing.
-
 function debounce(func, wait, immediate) {
   var timeout;
   return function() {
@@ -708,7 +619,6 @@ function debounce(func, wait, immediate) {
     if (immediate && !timeout) func.apply(context, args);
   };
 };
-
 var BrowserDetect = {
   init: function() {
     this.browser = this.searchString(this.dataBrowser) || "Other";
@@ -718,7 +628,6 @@ var BrowserDetect = {
     for (var i = 0; i < data.length; i++) {
       var dataString = data[i].string;
       this.versionSearchString = data[i].subString;
-
       if (dataString.indexOf(data[i].subString) !== -1) {
         return data[i].identity;
       }
@@ -729,7 +638,6 @@ var BrowserDetect = {
     if (index === -1) {
       return;
     }
-
     var rv = dataString.indexOf("rv:");
     if (this.versionSearchString === "Trident" && rv !== -1) {
       return parseFloat(dataString.substring(rv + 3));
@@ -737,7 +645,6 @@ var BrowserDetect = {
       return parseFloat(dataString.substring(index + this.versionSearchString.length + 1));
     }
   },
-
   dataBrowser: [{
       string: navigator.userAgent,
       subString: "Chrome",
@@ -769,6 +676,5 @@ var BrowserDetect = {
       identity: "Opera"
     }
   ]
-
 };
 </script>

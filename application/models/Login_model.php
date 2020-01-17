@@ -4,7 +4,7 @@ class Login_model extends CI_Model {
 		
 	}
 	function login($username,$password){
-		$sql="SELECT * FROM `user` WHERE email_id ='".$username."' AND password ='".$password."' AND status='Verified' "; 
+		$sql="SELECT * FROM `user` WHERE email_id ='".$username."' AND password ='".$password."'  ";//AND status='Verified' 
 		$query = $this->db->query($sql);
 		$count=$query->num_rows();
 		if($count>=1){

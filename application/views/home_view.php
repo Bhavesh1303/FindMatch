@@ -161,46 +161,74 @@
       <h3 class="title text-center mb-2">Gallery </h3>
       <div class="title-w3ls-text text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">
         <h6>Adventure Portfolio</h6>
-      </div>
-      <div class="row gallery-info no-gutters">
-        <div class="col-lg-3 col-md-6 col-sm-6 gallery-img-grid ">
-          <a href="#gal1">
-            <img src="<?php echo base_url('assets/images/ga1.jpg'); ?>" alt="news image" class="img-fluid">
-          </a>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 gallery-img-grid ">
-          <a href="#gal2">
-            <img src="<?php echo base_url('assets/images/ga2.jpg'); ?>" alt="news image" class="img-fluid">
-          </a>
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-6 gallery-img-grid ">
-          <a href="#gal3">
-            <img src="<?php echo base_url('assets/images/ga3.jpg'); ?>" alt="news image" class="img-fluid">
-          </a>
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-6 gallery-img-grid ">
-          <a href="#gal4">
-            <img src="<?php echo base_url('assets/images/ga4.jpg'); ?>" alt="news image" class="img-fluid">
-          </a>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 gallery-img-grid ">
-          <a href="#gal5">
-            <img src="<?php echo base_url('assets/images/ga5.jpg'); ?>" alt="news image" class="img-fluid">
-          </a>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 gallery-img-grid ">
-          <a href="#gal6">
-            <img src="<?php echo base_url('assets/images/ga6.jpg'); ?>" alt="news image" class="img-fluid">
-          </a>
-		  
-          <a href="#gal7">
-            <img src="<?php echo base_url('assets/images/ga7.jpg'); ?>" alt="news image" class="img-fluid">
-          </a>
-        </div>
+      </div><style>
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+<div class="row">
+  <div class="column">
+    <a href="#ga1">
+    <img src="<?php echo base_url('assets/images/ga1.jpg'); ?>" alt="Snow" style="width:100%; height:250px">
+  </a>
+  </div>
+  <div class="column">
+    <a href="#ga11">
+    <img src="<?php echo base_url('assets/images/ga11.jpg'); ?>" alt="Forest" style="width:100%; height:250px ">
+  </a>
+  </div>
+  <div class="column">
+    <a href="#ga3">
+    <img src="<?php echo base_url('assets/images/ga3.jpg'); ?>" alt="Mountains" style="width:100%; height:250px">
+  </a>
+  </div>
+  <div class="column">
+    <a href="#ga6">
+    <img src="<?php echo base_url('assets/images/ga6.jpg'); ?>" alt="Snow" style="width:100%; height:250px">
+  </a>
+  </div>
+  <div class="column">
+    <a href="#ga5">
+    <img src="<?php echo base_url('assets/images/ga5.jpg'); ?>" alt="Forest" style="width:100%; height:250px ">
+  </a>
+  </div>
+  <div class="column">
+    <a href="#ga8">
+    <img src="<?php echo base_url('assets/images/ga8.jpg'); ?>" alt="Mountains" style="width:100%; height:250px">
+  </a>
+  </div>
+  <div class="column">
+    <a href="#ga10">
+    <img src="<?php echo base_url('assets/images/ga10.jpg'); ?>" alt="Forest" style="width:100%; height:250px ">
+  </a>
+  </div>
+  <div class="column">
+    <a href="#ga9">
+    <img src="<?php echo base_url('assets/images/ga9.jpg'); ?>" alt="Forest" style="width:100%; height: 250px">
+  </a>
+  </div>
+  <div class="column">
+    <a href="#ga7">
+    <img src="<?php echo base_url('assets/images/ga7.jpg'); ?>" alt="Forest" style="width:100%; height:250px  ">
+  </a>
+  </div>
+
+</div>
+
+     
 
       </div>
       <!-- popup-->
-      <div id="gal1" class="popup-effect">
+      <div id="ga1" class="popup-effect">
         <div class="popup">
           <img src="<?php echo base_url('assets/images/ga1.jpg'); ?>" alt="Popup Image" class="img-fluid">
           <a class="close" href="#gallery">×</a>
@@ -208,15 +236,15 @@
       </div>
       <!-- //popup -->
       <!-- popup-->
-      <div id="gal2" class="popup-effect">
+      <div id="g11" class="popup-effect">
         <div class="popup">
-          <img src="<?php echo base_url('assets/images/ga2.jpg'); ?>" alt="Popup Image" class="img-fluid">
+          <img src="<?php echo base_url('assets/images/ga11.jpg'); ?>" alt="Popup Image" class="img-fluid">
           <a class="close" href="#gallery">×</a>
         </div>
       </div>
       <!-- //popup -->
       <!-- popup-->
-      <div id="gal3" class="popup-effect">
+      <div id="ga3" class="popup-effect">
         <div class="popup">
           <img src="<?php echo base_url('assets/images/ga3.jpg'); ?>" alt="Popup Image" class="img-fluid">
           <a class="close" href="#gallery">×</a>
@@ -224,23 +252,7 @@
       </div>
       <!-- //popup -->
       <!-- popup-->
-      <div id="gal4" class="popup-effect">
-        <div class="popup">
-          <img src="<?php echo base_url('assets/images/ga4.jpg'); ?>" alt="Popup Image" class="img-fluid">
-          <a class="close" href="#gallery">×</a>
-        </div>
-      </div>
-      <!-- //popup -->
-      <!-- popup-->
-      <div id="gal5" class="popup-effect">
-        <div class="popup">
-          <img src="<?php echo base_url('assets/images/ga5.jpg'); ?>" alt="Popup Image" class="img-fluid">
-          <a class="close" href="#gallery">×</a>
-        </div>
-      </div>
-      <!-- //popup -->
-      <!-- popup-->
-      <div id="gal6" class="popup-effect">
+      <div id="ga6" class="popup-effect">
         <div class="popup">
           <img src="<?php echo base_url('assets/images/ga6.jpg'); ?>" alt="Popup Image" class="img-fluid">
           <a class="close" href="#gallery">×</a>
@@ -248,13 +260,44 @@
       </div>
       <!-- //popup -->
       <!-- popup-->
-      <div id="gal7" class="popup-effect">
+      <div id="ga5" class="popup-effect">
+        <div class="popup">
+          <img src="<?php echo base_url('assets/images/ga5.jpg'); ?>" alt="Popup Image" class="img-fluid">
+          <a class="close" href="#gallery">×</a>
+        </div>
+      </div>
+      <!-- //popup -->
+      <!-- popup-->
+      <div id="ga8" class="popup-effect">
+        <div class="popup">
+          <img src="<?php echo base_url('assets/images/ga8.jpg'); ?>" alt="Popup Image" class="img-fluid">
+          <a class="close" href="#gallery">×</a>
+        </div>
+      </div>
+      <!-- //popup -->
+      <!-- popup-->
+      <div id="ga10" class="popup-effect">
+        <div class="popup">
+          <img src="<?php echo base_url('assets/images/ga10.jpg'); ?>" alt="Popup Image" class="img-fluid">
+          <a class="close" href="#gallery">×</a>
+        </div>
+      </div>
+      <!-- //popup -->
+<div id="ga9" class="popup-effect">
+        <div class="popup">
+          <img src="<?php echo base_url('assets/images/ga9.jpg'); ?>" alt="Popup Image" class="img-fluid">
+          <a class="close" href="#gallery">×</a>
+        </div>
+      </div>
+
+      <div id="ga7" class="popup-effect">
         <div class="popup">
           <img src="<?php echo base_url('assets/images/ga7.jpg'); ?>" alt="Popup Image" class="img-fluid">
           <a class="close" href="#gallery">×</a>
         </div>
       </div>
-      <!-- //popup -->
+
+     
     </div>
   </section>
   <!--//gallery -->
@@ -265,9 +308,6 @@
       <div class="title-w3ls-text text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">
         <h6>Choose Adventure</h6>
       </div>
-	  <?php 
-      if(isset($_SESSION['user_id'])){
-    ?>
       <div class="row">
 		<?php 
 			$eventdata= $this->booking_model->get_event_name();
@@ -277,10 +317,16 @@
 		?>
         <div class="col-lg-3 col-md-6 col-sm-6 my-3 adventure-trip-grids">
           <div class="discount-txt">
-            <img src="<?php echo base_url();?>upload/<?php echo $val['e_photo']; ?>"  alt="image" class="img-fluid">
-            <h6><?php echo $val['e_name'];?></h6>
-            <i><?php echo $val['e_date'];?></i>
+            <img src="<?php echo base_url();?>upload/Event_images/<?php if($val['e_photo']!='')
+			{echo $val['e_photo'];}
+			else{ echo 'default.jpg';} ?>"  style="height:200px;width:300px;" alt="image" class="img-fluid">
+            <br/><br/><h6><?php echo $val['e_name'];?></h6>
+            <i><?php echo date("d-m-Y", strtotime($val['e_date']));?></i>
             <p class="pt-lg-3 pt-2" style="white-space: nowrap; overflow: hidden;text-overflow: ellipsis;"><?php echo $val['e_desc'];?></p>
+            
+	  <?php 
+      if(isset($_SESSION['user_id'])){
+    ?>
             <div class="row mt-3">
               <div class="col-lg-6 col-md-6 col-sm-6 button-arrow ">
                 <a href="<?php echo base_url();?>Booking/event_detail/<?php echo $val['id'];?>" class="btn">Read More</a>
@@ -289,6 +335,9 @@
                 <h6>Rs <?php echo $val['e_price'];?></h6>
               </div>
             </div>
+    <?php }else{ ?>
+        <label style="font-family: serif;">Please Login to See Details</label>
+	  <?php }	?>
           </div>
         </div>
 		<?php 
@@ -296,11 +345,6 @@
 			}
 		?>
       </div>
-    <?php }else{ ?>
-      <div class="text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">
-        <h6>Please Login to See Events</h6>
-      </div>  
-	<?php }	?>
     </div>
   </section>
   <!--//booking -->
@@ -329,8 +373,7 @@
       <div class="row">
         <div class="col-lg-6 container-fulid">
           <div class="address_mail_footer_grids">
-           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.2117778085812!2d75.87193764471787!3d22.720368596469093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fd8bdaaaaaab%3A0x5e2e05e91cdc72e5!2sVisuotech+IT+Services!5e0!3m2!1sen!2sin!4v1566309864674!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-          </div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.878085908947!2d75.80140201443487!3d22.621027336893306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962f958dcb7169d%3A0xd877c12078e50f0f!2sMedi-Caps%20University!5e0!3m2!1sen!2sin!4v1577340007093!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe> </div>
         </div>
         <div class="col-lg-6 contact-form">
           <form action="<?php echo base_url();?>Home/Contact" method="post">
@@ -372,7 +415,7 @@
           <span> Phone</span> : +(91) 8349797058</p>
         <p class="pt-2">
           <span>Email</span> :
-          <a href="mailto:info@fymie.com">info@fymie.com</a>
+          <a href="mailto:fymie.events@gmail.com">fymie.events@gmail.com</a>
         </p>
       </div>
       <div class="social-icons text-center mt-md-4 mt-3">

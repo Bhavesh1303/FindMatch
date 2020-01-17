@@ -117,5 +117,48 @@ $this->load->model('booking_model');
 		}
 	}
 	
+	public function payment()
+	{
+		
+		$this->form_validation->set_rules('event_id', 'event_id', 'required');
+		$this->form_validation->set_rules('user_id', 'user_id', 'required');
+		
+        if($this->form_validation->run() == true)
+        {
+			$event_id = $this->input->post('event_id');
+			$user_id = $this->input->post('user_id');
+			
+			 $eventBookData = array(
+                 'event_id'=>$event_id,
+                 'user_id'=>$user_id,
+				   ); 
+			
+			$booking_check= $this->booking_model->check_booking($event_id,$user_id);
+			if($booking_check['flag']==0)
+				$this->db->insert('event_booked',$eventBookData);
+				$this->session->set_flashdata('message','Event Booked Please Pay for Confirmation');
+				$data['event']=$event_id;
+				$this->load->view('payment',$data);
+		}  
+		else
+		{
+			$this->session->set_flashdata('message','Something Went Wrong!');
+		    $this->load->view('home');	
+		}
+	}
+	
+	public function recipt()
+	{
+		$event_id = $this->input->post('event_id');
+		$price = $this->input->post('price');
+
+		$data['reciptData'] = array(
+			'event_id'=>$event_id,
+			'price'=>$price,
+			  ); 
+		
+		$this->load->view('recipt',$data);
+	}
+	
 	
 }

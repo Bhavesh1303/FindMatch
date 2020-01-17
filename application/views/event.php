@@ -6,7 +6,6 @@
 html *{
     -webkit-font-smoothing: antialiased;
 }
-
 .h6, h6 {
     font-size: .75rem !important;
     font-weight: 500;
@@ -14,12 +13,10 @@ html *{
     line-height: 1.5em;
     text-transform: uppercase;
 }
-
 .name h6 {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
 .navbar {
     border: 0;
     border-radius: 3px;
@@ -32,7 +29,6 @@ html *{
     transition: all 150ms ease 0s;
     
 }
-
 .navbar.navbar-transparent {
     z-index: 1030;
     background-color: transparent!important;
@@ -40,7 +36,6 @@ html *{
     padding-top: 25px;
     color: #fff;
 }
-
 .navbar .navbar-brand {
     position: relative;
     color: inherit;
@@ -51,26 +46,22 @@ html *{
     font-weight: 300;
     -webkit-font-smoothing: antialiased;
 }
-
 .navbar .navbar-nav .nav-item .nav-link:not(.btn) .material-icons {
     margin-top: -7px;
     top: 3px;
     position: relative;
     margin-right: 3px;
 }
-
 .navbar .navbar-nav .nav-item .nav-link .material-icons {
     font-size: 1.25rem;
     max-width: 24px;
     margin-top: -1.1em;
 }
-
 .navbar .navbar-nav .nav-item .nav-link .fa, .navbar .navbar-nav .nav-item .nav-link .material-icons {
     font-size: 1.25rem;
     max-width: 24px;
     margin-top: -1.1em;
 }
-
 .navbar .navbar-nav .nav-item .nav-link {
     position: relative;
     color: inherit;
@@ -80,23 +71,19 @@ html *{
     border-radius: 3px;
     line-height: 20px;
 }
-
 a .material-icons {
     vertical-align: middle;
 }
-
 .fixed-top {
     position: fixed;
     z-index: 1030;
     left: 0;
     right: 0;
 }
-
 .profile-page .page-header {
     height: 380px;
     background-position:center;
 }
-
 .page-header {
     height: 100vh;
     background-size: cover;
@@ -106,7 +93,6 @@ a .material-icons {
     display: flex;
     align-items: center;
 }
-
 .header-filter:after, .header-filter:before {
     position: absolute;
     z-index: 1;
@@ -117,27 +103,22 @@ a .material-icons {
     top: 0;
     content: "";
 }
-
 .header-filter::before {
     background: rgba(0,0,0,.5);
 }
-
 .main-raised {
     margin: -60px 30px 0;
     border-radius: 6px;
     box-shadow: 0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.2);
 }
-
 .main {
     background: #FFF;
     position: relative;
     z-index: 3;
 }
-
 .profile-page .profile {
     text-align: center;
 }
-
 .profile-page .profile img {
     max-width: 160px;
     width: 100%;
@@ -148,20 +129,16 @@ a .material-icons {
     -ms-transform: translate3d(0,-50%,0);
     transform: translate3d(0,-50%,0);
 }
-
 .img-raised {
     box-shadow: 0 5px 15px -8px rgba(0,0,0,.24), 0 8px 10px -5px rgba(0,0,0,.2);
 }
-
 .rounded-circle {
     border-radius: 50%!important;
 }
-
 .img-fluid, .img-thumbnail {
     max-width: 100%;
     height: auto;
 }
-
 .title {
     margin-top: 30px;
     margin-bottom: 25px;
@@ -170,44 +147,36 @@ a .material-icons {
     font-weight: 700;
     font-family: "Roboto Slab","Times New Roman",serif;
 }
-
 .profile-page .description {
     margin: 1.071rem auto 0;
     max-width: 600px;
     color: #999;
     font-weight: 300;
 }
-
 p {
     font-size: 14px;
     margin: 0 0 10px;
 }
-
 .profile-page .profile-tabs {
     margin-top: 4.284rem;
 }
-
 .nav-pills, .nav-tabs {
     border: 0;
     border-radius: 3px;
     padding: 0 15px;
 }
-
 .nav .nav-item {
     position: relative;
     margin: 0 2px;
 }
-
 .nav-pills.nav-pills-icons .nav-item .nav-link {
     border-radius: 4px;
 }
-
 .nav-pills .nav-item .nav-link.active {
     color: #fff;
     background-color: #9c27b0;
     box-shadow: 0 5px 20px 0 rgba(0,0,0,.2), 0 13px 24px -11px rgba(156,39,176,.6);
 }
-
 .nav-pills .nav-item .nav-link {
     line-height: 24px;
     font-size: 12px;
@@ -219,44 +188,34 @@ p {
     padding: 10px 15px;
     text-align: center;
 }
-
 .nav-pills .nav-item .nav-link:not(.active):hover {
     background-color: rgba(200,200,200,.2);
 }
-
-
 .nav-pills .nav-item i {
     display: block;
     font-size: 30px;
     padding: 15px 0;
 }
-
 .tab-space {
     padding: 20px 0 50px;
 }
-
 .profile-page .gallery {
     margin-top: 3.213rem;
     padding-bottom: 50px;
 }
-
 .profile-page .gallery img {
     width: 100%;
     margin-bottom: 2.142rem;
 }
-
 .profile-page .profile .name{
     margin-top: -80px;
 }
-
 img.rounded {
     border-radius: 6px!important;
 }
-
 .tab-content>.active {
     display: block;
 }
-
 /*buttons*/
 .btn {
     position: relative;
@@ -274,7 +233,6 @@ img.rounded {
     transition: box-shadow .2s cubic-bezier(.4,0,1,1),background-color .2s cubic-bezier(.4,0,.2,1);
     will-change: box-shadow,transform;
 }
-
 .btn.btn-just-icon {
     font-size: 20px;
     height: 41px;
@@ -285,7 +243,6 @@ img.rounded {
     position: relative;
     line-height: 41px;
 }
-
 .btn.btn-just-icon fa{
     margin-top: 0;
     position: absolute;
@@ -301,12 +258,7 @@ img.rounded {
     background-color: transparent;
     color: #999;
 }
-
 /* dropdown */
-
-
-
-
 .dropdown-menu {
     position: absolute;
     top: 100%;
@@ -323,12 +275,9 @@ img.rounded {
     border-radius: .25rem;
     transition: transform .3s cubic-bezier(.4,0,.2,1),opacity .2s cubic-bezier(.4,0,.2,1);
 }
-
 .dropdown-menu.show{
     transition: transform .3s cubic-bezier(.4,0,.2,1),opacity .2s cubic-bezier(.4,0,.2,1);
 }
-
-
 .dropdown-menu .dropdown-item:focus, .dropdown-menu .dropdown-item:hover, .dropdown-menu a:active, .dropdown-menu a:focus, .dropdown-menu a:hover {
     box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(156,39,176,.4);
     background-color: #9c27b0;
@@ -337,13 +286,10 @@ img.rounded {
 .show .dropdown-toggle:after {
     transform: rotate(180deg);
 }
-
 .dropdown-toggle:after {
     will-change: transform;
     transition: transform .15s linear;
 }
-
-
 .dropdown-menu .dropdown-item, .dropdown-menu li>a {
     position: relative;
     width: auto;
@@ -365,11 +311,9 @@ img.rounded {
     text-overflow: ellipsis;
     word-wrap: break-word;
 }
-
 .dropdown-menu.dropdown-with-icons .dropdown-item {
     padding: .75rem 1.25rem .75rem .75rem;
 }
-
 .dropdown-menu.dropdown-with-icons .dropdown-item .material-icons {
     vertical-align: middle;
     font-size: 24px;
@@ -379,9 +323,7 @@ img.rounded {
     margin-right: 12px;
     opacity: .5;
 }
-
 /* footer */
-
 footer{
     margin-top: 10px;
     color: #555;
@@ -399,12 +341,10 @@ footer p a{
     color: #555;
     font-weight: 400;
 }
-
 footer p a:hover {
     color: #9f26aa;
     text-decoration: none;
 }
-
 </style>
 <head>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
@@ -416,11 +356,22 @@ footer p a:hover {
 
 <body class="profile-page">
     
-    <div class="page-header header-filter" data-parallax="true" style="background-image:url('<?php echo base_url();?>assets/images/d.jpg');"></div>
+    <div class="page-header header-filter" data-parallax="true" style="background-image:url('<?php echo base_url();?>assets/images/background.jpg');"></div>
     <div class="main main-raised">
 		<div class="profile-content">
+        <div id="logo">
+          <h1>
+            <a href="<?php echo base_url();?>Home" style="font-family: serif;"> FYMIE</a>
+          </h1>
+        </div>
             <div class="container">
-			<form action="<?php echo base_url();?>index.php/" method="POST">
+			<?php 
+        $user_id= $_SESSION['user_id'];
+        $event_id=$specificEventData['specificEventData']['id'];
+        $booking_check= $this->booking_model->check_booking($event_id,$user_id);
+			?>
+      <form action="<?php echo base_url();?>Booking/payment" method="POST">
+      
                 <div class="row">
 	                <div class="col-md-6 ml-auto mr-auto">    
         	           <div class="profile">
@@ -428,21 +379,39 @@ footer p a:hover {
 	                            <img src="<?php echo base_url();?>assets/images/logo.png" alt="Circle Image" class="img-raised rounded-circle img-fluid">
 	                        </div>
 	                        <div class="name col-lg-12">
+                          <input type="hidden" name="event_id" value="<?php echo $specificEventData['specificEventData']['id'];?>">
+                          <input type="hidden" name="user_id" value="<?php echo $_SESSION['user_id'];?>">
 								<h3 class="title"><?php echo $specificEventData['specificEventData']['e_name'];?></h3>
-								<h6>Date: <?php echo $specificEventData['specificEventData']['e_date'];?> </h6>
+								<h5>Date: <?php echo date("d-m-Y", strtotime($specificEventData['specificEventData']['e_date']));?> </h5>
+								<h5>Price: <?php echo $specificEventData['specificEventData']['e_price'];?> </h5>
 								</div>
 	                    </div>
     	            </div>
                 </div>
                 <div class="description text-center">
                     <p>Event Detail's : <?php echo $specificEventData['specificEventData']['e_desc'];?> </p>
+                </div> 
+                <div class="description text-center">
+                <img src="<?php echo base_url();?>upload/Event_images/<?php echo $specificEventData['specificEventData']['e_photo']; ?>"  alt="image" height="400px" width="600px" class="img-fluid">
                 </div>
 				<br/>
+      <?php  
+      if($booking_check['flag']==1){
+      ?>
+      <div class="row" style="text-align: center;">
+      <div class="col-lg-12">
+      <input type="submit" class="col-lg-3 btn btn-primary" value="Proceed to Payment" >
+      </div>
+      </div>
+      <?php 
+      }else{
+      ?>
 				<div class="row" style="text-align: center;">
 				<div class="col-lg-12">
-				<input type="submit" class="col-lg-2 btn btn-primary" value="Book Event" onclick="alert('Event Booked')">
+				<input type="submit" class="col-lg-3 btn btn-primary" value="Book Event" onclick="alert('Confirm Booking Proceed to Payment')" >
 				</div>
 				</div>
+    <?php } ?>
 				<br/>
 				</form>
             </div>
@@ -459,46 +428,31 @@ footer p a:hover {
 </body>
 <script>
 var big_image;
-
 $(document).ready(function() {
   BrowserDetect.init();
-
   // Init Material scripts for buttons ripples, inputs animations etc, more info on the next link https://github.com/FezVrasta/bootstrap-material-design#materialjs
   $('body').bootstrapMaterialDesign();
-
   window_width = $(window).width();
-
   $navbar = $('.navbar[color-on-scroll]');
   scroll_distance = $navbar.attr('color-on-scroll') || 500;
-
   $navbar_collapse = $('.navbar').find('.navbar-collapse');
-
   //  Activate the Tooltips
   $('[data-toggle="tooltip"], [rel="tooltip"]').tooltip();
-
   // Activate Popovers
   $('[data-toggle="popover"]').popover();
-
   if ($('.navbar-color-on-scroll').length != 0) {
     $(window).on('scroll', materialKit.checkScrollForTransparentNavbar);
   }
-
   materialKit.checkScrollForTransparentNavbar();
-
   if (window_width >= 768) {
     big_image = $('.page-header[data-parallax="true"]');
     if (big_image.length != 0) {
       $(window).on('scroll', materialKit.checkScrollForParallax);
     }
-
   }
-
-
 });
-
 $(document).on('click', '.navbar-toggler', function() {
   $toggle = $(this);
-
   if (materialKit.misc.navbar_menu_visible == 1) {
     $('html').removeClass('nav-open');
     materialKit.misc.navbar_menu_visible = 0;
@@ -506,18 +460,14 @@ $(document).on('click', '.navbar-toggler', function() {
     setTimeout(function() {
       $toggle.removeClass('toggled');
     }, 550);
-
     $('html').removeClass('nav-open-absolute');
   } else {
     setTimeout(function() {
       $toggle.addClass('toggled');
     }, 580);
-
-
     div = '<div id="bodyClick"></div>';
     $(div).appendTo("body").click(function() {
       $('html').removeClass('nav-open');
-
       if ($('nav').hasClass('navbar-absolute')) {
         $('html').removeClass('nav-open-absolute');
       }
@@ -527,16 +477,13 @@ $(document).on('click', '.navbar-toggler', function() {
         $toggle.removeClass('toggled');
       }, 550);
     });
-
     if ($('nav').hasClass('navbar-absolute')) {
       $('html').addClass('nav-open-absolute');
     }
-
     $('html').addClass('nav-open');
     materialKit.misc.navbar_menu_visible = 1;
   }
 });
-
 materialKit = {
   misc: {
     navbar_menu_visible: 0,
@@ -546,7 +493,6 @@ materialKit = {
     navbar_initialized: false,
     isWindow: document.documentMode || /Edge/.test(navigator.userAgent)
   },
-
   initFormExtendedDatetimepickers: function() {
     $('.datetimepicker').datetimepicker({
       icons: {
@@ -562,11 +508,9 @@ materialKit = {
       }
     });
   },
-
   initSliders: function() {
     // Sliders for demo purpose
     var slider = document.getElementById('sliderRegular');
-
     noUiSlider.create(slider, {
       start: 40,
       connect: [true, false],
@@ -575,9 +519,7 @@ materialKit = {
         max: 100
       }
     });
-
     var slider2 = document.getElementById('sliderDouble');
-
     noUiSlider.create(slider2, {
       start: [20, 60],
       connect: true,
@@ -587,7 +529,6 @@ materialKit = {
       }
     });
   },
-
   checkScrollForParallax: function() {
     oVal = ($(window).scrollTop() / 3);
     big_image.css({
@@ -597,7 +538,6 @@ materialKit = {
       '-o-transform': 'translate3d(0,' + oVal + 'px,0)'
     });
   },
-
   checkScrollForTransparentNavbar: debounce(function() {
     if ($(document).scrollTop() > scroll_distance) {
       if (materialKit.misc.transparent) {
@@ -612,12 +552,10 @@ materialKit = {
     }
   }, 17)
 };
-
 // Returns a function, that, as long as it continues to be invoked, will not
 // be triggered. The function will be called after it stops being called for
 // N milliseconds. If `immediate` is passed, trigger the function on the
 // leading edge, instead of the trailing.
-
 function debounce(func, wait, immediate) {
   var timeout;
   return function() {
@@ -631,7 +569,6 @@ function debounce(func, wait, immediate) {
     if (immediate && !timeout) func.apply(context, args);
   };
 };
-
 var BrowserDetect = {
   init: function() {
     this.browser = this.searchString(this.dataBrowser) || "Other";
@@ -641,7 +578,6 @@ var BrowserDetect = {
     for (var i = 0; i < data.length; i++) {
       var dataString = data[i].string;
       this.versionSearchString = data[i].subString;
-
       if (dataString.indexOf(data[i].subString) !== -1) {
         return data[i].identity;
       }
@@ -652,7 +588,6 @@ var BrowserDetect = {
     if (index === -1) {
       return;
     }
-
     var rv = dataString.indexOf("rv:");
     if (this.versionSearchString === "Trident" && rv !== -1) {
       return parseFloat(dataString.substring(rv + 3));
@@ -660,7 +595,6 @@ var BrowserDetect = {
       return parseFloat(dataString.substring(index + this.versionSearchString.length + 1));
     }
   },
-
   dataBrowser: [{
       string: navigator.userAgent,
       subString: "Chrome",
@@ -692,6 +626,5 @@ var BrowserDetect = {
       identity: "Opera"
     }
   ]
-
 };
 </script>
